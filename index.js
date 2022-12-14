@@ -20,10 +20,10 @@ const llevarSiNo = [
 
 //se pide al usuario que seleccione lo que desea comer.
 alert("ingrese plato principal a encargar");
-let encargarComida = parseInt(prompt("1-Corte Malvina, 2- Matambre, 3-Vacio, 4-Falda"));
+let encargarComida = parseInt(prompt("1-Corte Malvina $800, 2- Matambre $900, 3-Vacio $700, 4-Falda $850"));
 alert("ingrese con que desea acompañar su plato principal");
-let encargarAcomp = parseInt(prompt("5-Fritas, 6-Pure, 7-Ensalada"));
-let lleva = prompt("¿Desea su comida para llevar? Indique: Si-No");
+let encargarAcomp = parseInt(prompt("5-Fritas $150, 6-Pure $125, 7-Ensalada $100"));
+let lleva = prompt("¿Desea su comida para llevar? Indique: Si($50)-No($0)");
 
 //se busca mediante un find, el precio del producto elegido.
 let comidaElegida = comida.find((item) => item.id == encargarComida)
