@@ -1,3 +1,4 @@
+// Se definen arrays y objetos del array
 const comida = [
     {id:1,nombre:"Malvina",precio: 800},
     {id:2,nombre:"Matambre",precio: 900},
@@ -16,25 +17,22 @@ const llevarSiNo = [
     {id:9,nombre:"No",precio: 0},
 ];
 
+
+//se pide al usuario que seleccione lo que desea comer.
 alert("ingrese plato principal a encargar");
 let encargarComida = parseInt(prompt("1-Corte Malvina, 2- Matambre, 3-Vacio, 4-Falda"));
 alert("ingrese con que desea acompañar su plato principal");
 let encargarAcomp = parseInt(prompt("5-Fritas, 6-Pure, 7-Ensalada"));
 let lleva = prompt("¿Desea su comida para llevar? Indique: Si-No");
 
+//se busca mediante un find, el precio del producto elegido.
 let comidaElegida = comida.find((item) => item.id == encargarComida)
 let acompElegida = acompañar.find((item) => item.id == encargarAcomp)
 let llevaElegida = llevarSiNo.find((item) => item.nombre == lleva)
+
+//Se suma todo lo seleccionado para saber el precio total a consumir
 totalPrecio = comidaElegida.precio + acompElegida.precio + llevaElegida.precio;
 
+// Se muestra mensaje al consumidor, el total que deberá abonar.
 let mensaje = `su total a abonar es ${totalPrecio}`;
 alert (mensaje);
-
-// let acompElegida = acompañar.filter(item => item.precio = item.id === encargarAcomp);
-// let llevarSino = llevarSiNo.filter(item => item.precio = item.id === lleva);
-
-// totalPrecio = comidaElegida + acompElegida + llevarSino;
-
-
-
-// alert(`Su monto a abonar, es de $${totalPrecio}`);
